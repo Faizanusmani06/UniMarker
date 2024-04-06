@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
   return (
-    <div className="bg-[#C6483C] py-6 -mb-1 overflow-x-clip">
-      <div className="p-5 md:container mx-auto flex justify-between">
-        <span className="text-2xl md:text-3xl text-[#F9F9F8] font-bold tracking-tight mr-5 md:px-1 md:shadow-md ">
-          <Link to="/" className="flex gap-0 md:gap-3 ">
-            {/* <img src="/hotel.png" alt="logo" className = "h-[80px] md:h-[60px] lg:h-[40px] object-cover"/> */}
-            <p className="text-white text-5xl">UniMarker</p>
-          </Link>
-        </span>
+    <div className="bg-gray-950 py-6 overflow-x-clip">
+      <div className="px-5 md:container mx-auto flex justify-between items-center">
+        <Link to="/" className="flex items-center">
+          <img src="https://t4.ftcdn.net/jpg/03/33/10/15/360_F_333101512_WwHCJ5KYgAIezclCKjCTFwT7lWauNxbk.jpg" alt="Logo" className="h-100 md:h-20 mr-2 object-cover " />
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">UniMarker</p>
+        </Link>
+        <nav className="text-white">
+          <Link to="/about" className="mr-4 hover:text-gray-300">About</Link>
+          <Link to="/features" className="mr-4 hover:text-gray-300">Features</Link>
+          <Link to="/contact" className="hover:text-gray-300">Contact</Link>
+        </nav>
       </div>
     </div>
   );

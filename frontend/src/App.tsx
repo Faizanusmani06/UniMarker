@@ -18,6 +18,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 
 import Form from "./pages/Form";
+import Result from "./pages/Result";
 
 const App = () => {
   // const { isLoggedIn } = useAppContext();
@@ -41,14 +42,14 @@ const App = () => {
           }
         /> 
 
-        {/* <Route
-          path="/detail/:hotelId"
+        <Route
+          path="/result"
           element={
             <Layout>
-              <Detail />
+              <Result />
             </Layout>
           }
-        /> */}
+        />
         {/* <Route
           path="/register"
           element={

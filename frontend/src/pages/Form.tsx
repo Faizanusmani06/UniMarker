@@ -55,16 +55,16 @@ const Register = () => {
 //     },
 //   });
   const onSubmit = handleSubmit(() => {
-    navigate("/")
+    navigate("/result")
     // mutation.mutate(data);
 
   });
   return (
-    <div className="bg-slate-200 p-8 rounded-lg">
+    <div className="bg-[#0e0f1f] p-8 rounded-lg">
         <form className="flex flex-col gap-5" onSubmit={onSubmit}>
-      <h2 className="text-3xl font-bold text-center">Fill this form and get your Unified Percentage</h2>
+      <h2 className="text-gray-100 text-3xl font-bold text-center">Fill this form and get your Unified Percentage</h2>
       <div className="flex flex-col md:flex-row gap-5">
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-gray-100 text-sm font-bold flex-1">
             Name
           <input
             className="border rounded w-full py-1 px-2 font-normal"
@@ -75,7 +75,7 @@ const Register = () => {
           )}
         </label>
       </div>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Email
         <input
           type="email"
@@ -86,70 +86,70 @@ const Register = () => {
           <span className="text-red-500">{errors.email.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Board
-        <Select options={options} />
+        <Select className="text-gray-800" options={options} />
         {errors.board && (
           <span className="text-red-500">{errors.board.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         year_of_passing
         <input
           type="number"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("year_of_passing", { required: "This field is required" })}
         />
         {errors.year_of_passing && (
           <span className="text-red-500">{errors.year_of_passing.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Math
         <input
           type="number"
           min={0}
           max={100}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("math", { required: "This field is required" })}
         />
         {errors.math && (
           <span className="text-red-500">{errors.math.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Science
         <input
           type="number"
           min={0}
           max={100}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("science", { required: "This field is required" })}
         />
         {errors.science && (
           <span className="text-red-500">{errors.science.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         English
         <input
           type="number"
           min={0}
           max={100}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("english", { required: "This field is required" })}
         />
         {errors.english && (
           <span className="text-red-500">{errors.english.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Social Science
         <input
           type="number"
           min={0}
           max={100}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("total_marks", { required: "This field is required" })}
         />
         {errors.total_marks && (
@@ -157,26 +157,26 @@ const Register = () => {
         )}
       </label>
 
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Regional_language
         {/* <input
           type="email"
           className="border rounded w-full py-1 px-2 font-normal"
           {...register("email", { required: "This field is required" })}
         /> */}
-        <Select options={language_options} />
+        <Select className="text-gray-900" options={language_options} />
         {errors.board && (
           <span className="text-red-500">{errors.board.message}</span>
         )}
       </label>
 
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Regional_language_marks
         <input
           type="number"
           min={0}
           max={100}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("regional_language_marks", { required: "This field is required" })}
         />
         {errors.regional_language_marks && (
@@ -184,24 +184,24 @@ const Register = () => {
         )}
       </label>
 
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Obtain Marks
         <input
           type="number"
           min={0}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("obtain_number", { required: "This field is required" })}
         />
         {errors.obtain_number && (
           <span className="text-red-500">{errors.obtain_number.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-gray-100 text-sm font-bold flex-1">
         Total Marks
         <input
           type="number"
           min={0}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="text-gray-800 border rounded w-full py-1 px-2 font-normal"
           {...register("total_marks", { required: "This field is required" })}
         />
         {errors.total_marks && (
@@ -211,9 +211,9 @@ const Register = () => {
       <span>
         <button
           type="submit"
-          className="bg-[#33b249] text-[#F9F9F8] p-2 font-bold hover:bg-[#33c651] text-xl"
+          className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-8 py-3"
         >
-          Create Account
+          Generate Your Unified Marking Result
         </button>
       </span>
     </form>

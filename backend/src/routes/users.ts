@@ -25,7 +25,7 @@ router.get("/me", verifyToken, async (req: Request, res: Response) => {
 router.post(
   "/register",
   [
-    check("firstName", "First Name is required").isString(),
+    check("name", "Name is required").isString(),
     check("lastName", "Last Name is required").isString(),
     check("email", "Email is required").isEmail(),
     check("password", "Password with 6 or more characters required").isLength({
@@ -38,14 +38,7 @@ router.post(
       return res.status(400).json({ message: errors.array() });
     }
     try {
-      let user = await User.findOne({
-        email: req.body.email,
-      });
-
-      if (user) {
-        res.status(400).json({ message: "User already exists" }); //bad request
-      }
-
+      
       user = new User(req.body);
       await user.save();
       const token = jwt.sign(

@@ -55,7 +55,7 @@ const Register = () => {
 //     },
 //   });
   const onSubmit = handleSubmit(() => {
-    navigate("/")
+    navigate("/result")
     // mutation.mutate(data);
 
   });
@@ -213,7 +213,7 @@ const Register = () => {
           type="submit"
           className="bg-[#33b249] text-[#F9F9F8] p-2 font-bold hover:bg-[#33c651] text-xl"
         >
-          Create Account
+          Submit
         </button>
       </span>
     </form>

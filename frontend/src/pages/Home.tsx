@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -69,7 +70,14 @@ const Home = () => {
         >
           Generate Your Unified Marking Result
         </button>
-      </div>
+      </div> <header>
+      <SignedOut>
+        <SignInButton /><p>fhdjsbfhdsagfuhkjdashbfhg</p>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </header>
     </div>
   );
 };
